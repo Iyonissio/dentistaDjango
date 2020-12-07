@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+ <!-- <div class="breadcumb-area bg-img bg-gradient-overlay"
+     style="background-image: url({% static 'website/images/blog-image1.jpg' %});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center" >
+            <div class="col-12">
+                <h2 class="title">Consulta</h2>
+            </div>
+        </div>
+    </div>
+</div> -->
+<br>
+<br>
+<br>
+<center>
+    <h1>Resumo de Toda a Marcacao</h1>
+    <strong> Nome : </strong>{{cf_name}}</p>
+    <strong> Email : </strong>{{cf_email}}</p>
+    <strong> Celular : </strong>{{cf_number}}</p>
+    <strong> Endereco : </strong> {{cf_endereco}}</p>
+    <strong> Mensagem : </strong>{{cf_message}}</p>
+    <strong> Horario : </strong>{{cf_budgets}}</p>
+
+<br>
+<br/><br/>
+<strong>Nota: </strong> Esta consulta ira ser confirmada brevemente,
+iremos contacta lo brevemente para confirmar a Consulta.
+<br/><br/>
+</center>
+
+
+
+
+
+
+{% endblock %}
