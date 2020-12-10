@@ -39,7 +39,6 @@ def contact(request):
 
 def consulta(request):
     if request.method == "POST":
-
         cf_name = request.POST['cf-name']
         cf_email = request.POST['cf-email']
         cf_number = request.POST['cf-number']
@@ -47,6 +46,13 @@ def consulta(request):
         cf_message = request.POST['cf-message']
         cf_budgets = request.POST['cf-budgets']
 
+        consulta = "Nome: " + cf_name + " Email: " + cf_email + " Celular:" + cf_number + " Endereco: " + cf_endereco + "Mensagem: " + cf_message + "Horario:" + cf_budgets
+        send_mail(
+            'Requesicao Marcacao de Consulta', #Assunto
+            consulta,   #Mensagem
+            cf_email,  # Origem
+            ['mbryoyo01@gmail.com'],  # Destino Emails
+        )
         return render(request,'consulta.html',{
             'cf_name':cf_name,
             'cf_email':cf_email,
@@ -56,7 +62,7 @@ def consulta(request):
             'cf_budgets':cf_budgets,
         })
     else:
-        return render(request,'contact.html',{})
+        return render(request,'home.html',{})
 
 @unauthenticated_user
 def registerPage(request):
