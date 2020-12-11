@@ -19,6 +19,9 @@ def pricing(request):
 def services(request):
     return render(request,'services.html',{})
 
+def blogdetail(request):
+    return render(request,'blog-detail.html',{})
+
 def contact(request):
     if request.method == "POST":
         cf_name = request.POST['cf-name']
