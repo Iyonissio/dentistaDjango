@@ -7,6 +7,14 @@ from django.contrib.auth.models import Group
 from .decorators import unauthenticated_user , allowed_users ,admin_only
 from .forms import CreateUserForm
 
+def registerPage(request):
+    context={}
+    return render(request, 'register.html',context)
+
+def loginPage(request):
+    context={}
+    return render(request, 'login.html',context)
+
 def home(request):
     return render(request,'home.html',{})
 

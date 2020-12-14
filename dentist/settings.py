@@ -29,7 +29,7 @@ SECRET_KEY = '5wrcupa(y122&em)9y#(5k07h)c=m8$geijtic%9aqarxfw#8t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://dentissta.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
